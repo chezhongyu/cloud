@@ -27,6 +27,15 @@ public class AdController {
         return "/system/user-list";
     }
 
+    @RequestMapping("/search")
+    public String search(ModelMap modelMap,AdDto adDto){
+        modelMap.addAttribute("list",adService.searchByPage(adDto));
+        //jsp页面中的分页标签使用Page类型，所以可以通过adDto关联到Page对象
+        modelMap.addAttribute("searchParam",adDto);
+        return "/system/user-list";
+
+    }
+
     @RequestMapping("/delete/{id}")
     public String delete(@ModelAttribute("id") Integer id){
         adService.deleteI(id);

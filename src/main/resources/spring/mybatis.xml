@@ -3,6 +3,6 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
  	<plugins>
-		<plugin interceptor="com.xianzhi.dao.interceptor.PageInterceptor"></plugin>
+		<plugin interceptor="com.clouds.dao.interceptor.PageInterceptor"></plugin>
 	</plugins>
   </configuration>
