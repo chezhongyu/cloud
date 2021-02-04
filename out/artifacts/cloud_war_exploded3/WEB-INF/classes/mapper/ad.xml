@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间：可以对sql进行分类化管理-->
+<mapper namespace="com.xianzhi.dao.AdDao">
+
+    <select id="selectByPage" parameterType="Ad" resultType="Ad">
+        select id,title,img_file_name,link,weight from ad
+        <where>
+            <if test="title!=null and title!=''">
+            title like "%${title}%"
+            </if>
+        </where>
+    </select>
+
+    <select id="selectById" parameterType="Ad" resultType="Ad">
+       select id,title,img_file_name,link,weight from ad where id=#{id}
+
+    </select>
+
+    <insert id="insert" parameterType="Ad">
+        insert into ad(title,img_file_name,link,weight) values(#{title},#{imgfilename},#{link},#{weight})
+    </insert>
+
+
+    <delete id="delete" parameterType="Ad">
+        delete from ad where id=#{id};
+    </delete>
+
+    <update id="update" parameterType="Ad">
+        update ad set title=#{title},img_file_name=#{imgfilename},link=#{link},weight=#{weight} where id=#{id}
+    </update>
+</mapper>
