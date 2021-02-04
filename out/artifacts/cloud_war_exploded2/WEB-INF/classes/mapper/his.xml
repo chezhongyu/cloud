@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--命名空间：可以对sql进行分类化管理-->
-<mapper namespace="com.clouds.dao.AdDao">
+<mapper namespace="com.clouds.dao.HisDao">
 
     <select id="selectByPage" parameterType="His" resultType="His">
         select ID,UserName,Password,RealName,UseType,DocTitleID,IsScheduling,DeptID,RegistLeID,DelMark from user

@@ -8,6 +8,6 @@ import org.springframework.web.multipart.MultipartFile;
  * 作用：主要用于controller与service之间的联系
  *
  */
-public class AdDto extends His {
+public class HisDto extends His {
 
 }

@@ -42,7 +42,7 @@ public class PageInterceptor implements Interceptor{
                 SystemMetaObject.DEFAULT_OBJECT_FACTORY,
                 SystemMetaObject.DEFAULT_OBJECT_WRAPPER_FACTORY,
                 new DefaultReflectorFactory());
-        //根据key来获取到映射对象MappedStatement----------AdDao.xml
+        //根据key来获取到映射对象MappedStatement----------HisDao.xml
         MappedStatement mappedStatement = (MappedStatement) metaObject.getValue("delegate.mappedStatement");
         //然后可以获取到操作的id
         String id = mappedStatement.getId();

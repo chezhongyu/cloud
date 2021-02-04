@@ -1,17 +1,17 @@
 package com.clouds.service;
 
 import com.clouds.bean.His;
-import com.clouds.dto.AdDto;
+import com.clouds.dto.HisDto;
 
 import java.util.List;
 
-public interface AdService {
+public interface HisService {
     /***
      * 根据条件查询信息
-     * @param adDto 查询条件
+     * @param HisDto 查询条件
      * @return List<AdDto>
      */
-    public List<AdDto> searchByPage(AdDto adDto);
+    public List<HisDto> searchByPage(HisDto hisDto);
     /**
      * 删除
      * @param id

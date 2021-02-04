@@ -5,7 +5,7 @@ import com.clouds.bean.His;
 
 import java.util.List;
 
-public interface AdDao {
+public interface HisDao {
 
     /**
      * 根据条件查询
