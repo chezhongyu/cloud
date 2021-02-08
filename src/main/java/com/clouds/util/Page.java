@@ -1,7 +1,6 @@
 package com.clouds.util;
 
 /**
- * Created by foreknow on 2021/1/27.
  * 分页的工具类
  */
 public class Page {

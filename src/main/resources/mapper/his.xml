@@ -7,18 +7,30 @@
 
     <select id="selectByPage" parameterType="His" resultType="His">
         select ID,UserName,Password,RealName,UseType,DocTitleID,IsScheduling,DeptID,RegistLeID,DelMark from user
-
         <where>
             <if test="UserName!=null and UserName!=''">
-            title like "%${UserName}%"
+            UserName like "%${userName}%"
             </if>
         </where>
+
+    </select>
+
+    <delete id="delete" parameterType="His">
+        delete from user where ID=#{ID};
+    </delete>
+
+
+    <insert id="insert" parameterType="His">
+        insert into user(UserName,Password,RealName,UseType,DocTitleID,IsScheduling,DeptID,RegistLeID,DelMark) values(#{userName},#{Password},#{RealName},#{UseType},#{DocTitleID},#{IsScheduling},#{DeptID},#{RegistLeID},#{DelMark})
+    </insert>
+
+
+    <select id="selectone" parameterType="His" resultType="His">
+        select * from user where ID=#{ID}
     </select>
 
 
-
-<!--    <delete id="delete" parameterType="Ad">-->
-<!--        delete from ad where id=#{id};-->
-<!--    </delete>-->
-
+    <update id="update" parameterType="His">
+        update user set UserName=#{userName},Password=#{Password},RealName=#{RealName},UseType=#{UseType},DocTitleID=#{DocTitleID},IsScheduling=#{IsScheduling},DeptID=#{DeptID},RegistLeID=#{RegistLeID},DelMark=#{DelMark} where ID=#{ID}
+    </update>
 </mapper>

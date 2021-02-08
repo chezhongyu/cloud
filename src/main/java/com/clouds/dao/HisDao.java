@@ -8,8 +8,7 @@ import java.util.List;
 public interface HisDao {
 
     /**
-     * 根据条件查询
-     * 返回list
+     * username模糊查询
      * @param his
      * @return
      */
@@ -21,4 +20,26 @@ public interface HisDao {
      * @return
      */
     public boolean delete(int id);
+
+
+    /**
+     * 添加
+     * @param his
+     * @return
+     */
+    public boolean insert(His his);
+
+    /**
+     * 根据id查询
+     * @param his
+     * @return
+     */
+    public His selectone(His his);
+
+    /**
+     * 修改
+     * @param his
+     * @return
+     */
+    public boolean update(His his);
 }

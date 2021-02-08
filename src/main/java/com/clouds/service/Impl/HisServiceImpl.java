@@ -42,4 +42,22 @@ public class HisServiceImpl implements HisService {
         return true;
     }
 
+    @Override
+    public boolean insertI(HisDto hisDto) {
+        hisDao.insert(hisDto);
+        return true;
+    }
+
+    @Override
+    public His selectOne(HisDto hisDto) {
+         His his = hisDao.selectone(hisDto);
+        return his;
+    }
+
+    @Override
+    public boolean updateI(HisDto hisDto) {
+        hisDao.update(hisDto);
+        return true;
+    }
+
 }
